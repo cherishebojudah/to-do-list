@@ -19,6 +19,12 @@ header, form {
 button {
     border: none;
     outline: none;
+    font-weight: bold;
+}
+
+button:hover {
+    background: white;
+    color: #0b4a32;
 }
 
 input {
@@ -46,7 +52,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.5 ease;
+    transition: all 0 .5s ease;
 }
 
 .todo-item {
@@ -78,6 +84,40 @@ input {
     opacity: 0.5;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: black;
+    width: 10rem;
+    cursor: pointer;
+    padding: .8rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    color: white;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
+}
+
 .bg-primary {
     background-color: #0b4a32;
 }
@@ -86,23 +126,8 @@ input {
     color: #ffffff;
 }
 
-.mt-2 {
-    margin-top: 3%;
-}
-
-.mt-10 {
-    margin-top: 10%;
-}
-
-.mx-33 {
-    margin-left: 33%;
-}
 .px-1 {
     padding: 0 10px;
-}
-
-.px-2 {
-    padding: 0px 20px;
 }
 
 .w-10 {

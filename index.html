@@ -15,9 +15,16 @@
         <form class>
             <input id="todo-input" class="h-20 w-20 border-none" type="text">
             <button id="todo-btn" class="w-10 h-20 bg-primary txt-white">Add to List</button>
+            <div class="select">
+                <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
         </form>
      
-        <div id="todo-container" class='mt-2 px-2'> 
+        <div id="todo-container" class=''> 
             <ul id="todo-list">
                  
             </ul>
