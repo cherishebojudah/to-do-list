@@ -1,28 +1,3 @@
-// // Target elements in html
-// let newItem = document.querySelector('input'),
-//     addToList = document.querySelector('button');
-
-// // create new element
-// function createElement() {
-//         let listItem = document.createElement('LI');
-//             listText = document.createTextNode(newItem.value);
-//         listItem.appendChild(listText);
-//         document.querySelector('ul').appendChild(listItem);
-//         newItem.value = '';
-// }
-
-// //create delete button
-// function deleteItem() {
-//     let btn = document.createElement('button');
-//          btn.innerText('Delete');
-//          btn.style.backgroundColor = 'red';
-//          newItem.appendChild('btn');
-// }
-
-// // add eventlisteners
-// addToList.addEventListener('click', createElement);
-// // addToList.addEventListener('click', deleteItem);
-
 //Selectors
 
 let todoInput = document.querySelector('#todo-input'),
@@ -31,6 +6,7 @@ let todoInput = document.querySelector('#todo-input'),
 
 //Event Listeners
 todoButton.addEventListener('click', addTodo);
+todoList.addEventListener('click', checkDelete);
 
 //Functions
 
@@ -66,4 +42,18 @@ function addTodo(event) {
     //clear input field
     todoInput.value = '';
 
+}
+
+function checkDelete(e) {
+    let item = e.target;
+
+    //delete todo
+    if(item.classList[0] === 'delete-btn') {
+        item.parentElement.remove();
+    }
+
+    //check list
+    if(item.classList[0] === 'complete-btn') {
+        item.parentElement.classList.toggle('completed');
+    }
 }

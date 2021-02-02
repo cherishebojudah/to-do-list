@@ -46,7 +46,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    transition: all 0.5 ease;
 }
 
 .todo-item {
@@ -67,6 +67,15 @@ input {
 
 .complete-btn {
     background: #0b4a32;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+} 
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
 .bg-primary {
